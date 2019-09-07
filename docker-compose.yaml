@@ -1,20 +1,16 @@
 version: "3.7"
 services:
   webui:
-    build:
-      context: .
-      dockerfile: webui.Dockerfile
+    build: webui
     ports:
       - 80:80
     volumes:
-      - ./webui/:/usr/local/apache2/htdocs/
+      - ./webui/src/:/usr/local/apache2/htdocs/
     restart: always
   backend:
-    build:
-      context: .
-      dockerfile: backend.Dockerfile
+    build: backend
     ports:
       - 5000:5000
     volumes:
-      - ./backend/:/usr/src/app/
+      - ./backend/src/:/app/
     restart: always
