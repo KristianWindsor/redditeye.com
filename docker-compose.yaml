@@ -24,3 +24,12 @@ services:
     volumes:
       - ./db/mysql-data/:/var/lib/mysql
     restart: always
+  phpmyadmin:
+    build: phpmyadmin
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=phpmyadmin
+      - PMA_PASSWORD=pass
+    ports:
+      - 8080:8080
+    restart: always

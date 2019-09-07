@@ -27,6 +27,13 @@ spec:
         backend:
           serviceName: redditeye
           servicePort: 5000
+  - host: phpmyadmin.redditeye.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: redditeye
+          servicePort: 8080
   tls:
   - secretName: redditeye
     hosts:
