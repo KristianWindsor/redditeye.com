@@ -10,6 +10,7 @@ spec:
   commonName: redditeye.com
   dnsNames:
   - redditeye.com
+  - '*.redditeye.com'
   acme:
     config:
     - dns01:
@@ -17,3 +18,4 @@ spec:
         ingressClass: nginx
       domains:
       - redditeye.com
+      - '*.redditeye.com'
