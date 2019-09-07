@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app/
 
-COPY ./backend/ /app/
+COPY ./src/ /app/
 COPY requirements.txt /app/
 
 RUN pip3 install -r requirements.txt
