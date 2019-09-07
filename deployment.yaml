@@ -34,3 +34,5 @@ spec:
           env:
             - name: PMA_HOST
               value: 127.0.0.1
+        - name: redditapi
+          image: kristianwindsor/redditeye-redditapi
