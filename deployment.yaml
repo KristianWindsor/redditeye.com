@@ -12,13 +12,18 @@ spec:
         app: redditeye
     spec:
       containers:
-#
         - name: webui
           image: kristianwindsor/redditeye-webui
           ports:
             - containerPort: 80
-#
         - name: backend
           image: kristianwindsor/redditeye-backend
           ports:
             - containerPort: 5000
+        - name: db
+          image: kristianwindsor/redditeye-db
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: pass
