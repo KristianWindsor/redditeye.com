@@ -22,7 +22,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./db/mysql-data/:/var/lib/mysql
+      - ./db/mysql-data/:/var/lib/mysql/
+      - ./db/src/:/docker-entrypoint-initdb.d/
     restart: always
   phpmyadmin:
     build: phpmyadmin
@@ -37,6 +38,9 @@ services:
     build: redditapi
     environment:
       - USER_AGENT=redditeye
+      - MYSQL_HOSTNAME=db
     env_file:
       - environment.env
+    volumes:
+      - ./redditapi/src/:/app/
     restart: always

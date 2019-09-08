@@ -49,3 +49,5 @@ spec:
                   key: CLIENT_SECRET
             - name: USER_AGENT
               value: redditeye
+            - name: MYSQL_HOSTNAME
+              value: localhost
