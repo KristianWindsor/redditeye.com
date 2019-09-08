@@ -1,2 +1,4 @@
 .DS_Store
+secret.yaml
+environment.env
 db/mysql-data/

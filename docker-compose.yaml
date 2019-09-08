@@ -35,4 +35,8 @@ services:
     restart: always
   redditapi:
     build: redditapi
+    environment:
+      - USER_AGENT=redditeye
+    env_file:
+      - environment.env
     restart: always

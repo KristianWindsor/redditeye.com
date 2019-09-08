@@ -36,3 +36,16 @@ spec:
               value: 127.0.0.1
         - name: redditapi
           image: kristianwindsor/redditeye-redditapi
+          env:
+            - name: CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: redditeye-env
+                  key: CLIENT_ID
+            - name: CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: redditeye-env
+                  key: CLIENT_SECRET
+            - name: USER_AGENT
+              value: redditeye
