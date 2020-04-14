@@ -25,15 +25,6 @@ services:
       - ./db/mysql-data/:/var/lib/mysql/
       - ./db/src/:/docker-entrypoint-initdb.d/
     restart: always
-  phpmyadmin:
-    build: phpmyadmin
-    environment:
-      - PMA_HOST=db
-      - PMA_USER=phpmyadmin
-      - PMA_PASSWORD=pass
-    ports:
-      - 8080:8080
-    restart: always
   redditapi:
     build: redditapi
     environment:

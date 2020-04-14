@@ -27,13 +27,6 @@ spec:
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: pass
-        - name: phpmyadmin
-          image: kristianwindsor/redditeye-phpmyadmin
-          ports:
-            - containerPort: 8080
-          env:
-            - name: PMA_HOST
-              value: 127.0.0.1
         - name: redditapi
           image: kristianwindsor/redditeye-redditapi
           env:
